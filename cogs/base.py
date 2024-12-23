@@ -46,7 +46,7 @@ class UtilityCommands(commands.Cog):
         await ctx.send(f"Purged {delete} bot message(s).", delete_after=30)
         await ctx.message.delete()
 
-    @commands.command()
+    @discord.app_commands.command(name="cls", description="Clear Msg's")
     async def cls(self, ctx):
         delete = 0
         async for message in ctx.channel.history(limit=400):
